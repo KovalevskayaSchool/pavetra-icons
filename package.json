@@ -1,0 +1,48 @@
+{
+  "name": "@kovalevskayaschool/pavetra-icons",
+  "version": "0.0.1",
+  "description": "react icons",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate": "node  --loader ts-node/esm ./scripts/generate.ts",
+    "clean": "rimraf dist",
+    "package": "npm run clean && rollup -c ./rollup.config.mjs",
+    "prepublishOnly": "npm run package",
+    "build": "npm run package"
+  },
+  "repository": {
+    "url": "git://github.com/KovalevskayaSchool/pavetra-ui.git"
+  },
+  "author": "Aleksei <symblight@gmail.com>",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@svgr/core": "^6.2.1",
+    "@types/node": "^18.15.11",
+    "fast-glob": "^3.2.12",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.20.2",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.2"
+  }
+}

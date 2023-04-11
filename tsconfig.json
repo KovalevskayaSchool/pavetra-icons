@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "outDir": "./dist/",
+    "lib": ["es2022"],
+    "target": "es2022",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "module": "esnext"
+  },
+  "include": ["src/lib"],
+  "exclude": ["node_modules/*"]
+}
