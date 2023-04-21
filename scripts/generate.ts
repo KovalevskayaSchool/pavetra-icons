@@ -1,19 +1,19 @@
-import * as path from 'node:path';
-import * as fs from 'node:fs';
-import { stat } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { mkdir } from 'node:fs/promises';
-import { transform } from '@svgr/core';
+import * as path from "node:path";
+import * as fs from "node:fs";
+import { stat } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { mkdir } from "node:fs/promises";
+import { transform } from "@svgr/core";
 
 const readFile = (file: string): Promise<string> =>
   new Promise((resolve, reject) =>
-    fs.readFile(file, 'utf8', (err, data) =>
+    fs.readFile(file, "utf8", (err, data) =>
       err ? reject(err) : resolve(data)
     )
   );
 
 function clearAndUpper(text: string) {
-  return text.replace(/-/, '').toUpperCase();
+  return text.replace(/-/, "").toUpperCase();
 }
 
 function toPascalCase(text: string) {
@@ -77,21 +77,30 @@ const generateIcons = async (): Promise<void> => {
     await createIfNotExistsFolderByName(outputIconPath);
     fs.readdir(folderIconPath, async (err, files) => {
       files.forEach(async (file) => {
-        if (!file.includes('.svg')) {
+        if (!file.includes(".svg")) {
           return;
         }
 
         const svgCode: string = await readFile(path.join(folderIconPath, file));
 
-        const componentName = toPascalCase(file.replace('.svg', ''));
+        const componentName = toPascalCase(file.replace(".svg", ""));
         const jsCode = await transform.sync(
           svgCode,
-          { icon: true, template: renderTemplate },
+          {
+            icon: true,
+            template: renderTemplate,
+            replaceAttrValues: {
+              fill: "currentColor",
+            },
+            svgProps: {
+              fill: "currentColor",
+            },
+          },
           { componentName }
         );
 
         fs.writeFile(
-          path.join(outputIconPath, componentName + '.tsx'),
+          path.join(outputIconPath, componentName + ".tsx"),
           jsCode,
           (err) => {
             if (err) {
@@ -118,16 +127,16 @@ const generateInputFile = async () => {
 
     fs.readdir(folderIconPath, async (err, files) => {
       const templateCode = files.reduce((acc, file) => {
-        if (!file.includes('.tsx')) {
+        if (!file.includes(".tsx")) {
           return acc;
         }
 
-        const component = file.replace('.tsx', '');
+        const component = file.replace(".tsx", "");
 
         return (
           acc + `\nexport { ${component} } from './${folder}/${component}';`
         );
-      }, '');
+      }, "");
 
       fs.writeFile(inputFilePath, templateCode, (err) => {
         if (err) {
@@ -139,4 +148,4 @@ const generateInputFile = async () => {
   });
 };
 
-generateIcons()
+generateIcons();
