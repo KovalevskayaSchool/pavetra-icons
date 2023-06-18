@@ -27,6 +27,7 @@ export { PaperPlaneOutline } from './outlined/PaperPlaneOutline';
 export { PeopleOutline } from './outlined/PeopleOutline';
 export { PersonOutline } from './outlined/PersonOutline';
 export { PlusOutline } from './outlined/PlusOutline';
+export { SearchOutline } from './outlined/SearchOutline';
 export { Skype } from './outlined/Skype';
 export { SunOutline } from './outlined/SunOutline';
 export { Telegram } from './outlined/Telegram';
