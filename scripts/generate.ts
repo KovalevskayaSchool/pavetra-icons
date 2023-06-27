@@ -90,10 +90,11 @@ const generateIcons = async (): Promise<void> => {
             icon: true,
             template: renderTemplate,
             replaceAttrValues: {
-              fill: "currentColor",
+              fill: "none", // if outline
             },
             svgProps: {
-              fill: "currentColor",
+              fill: "none",
+              stroke: "currentColor",
             },
           },
           { componentName }

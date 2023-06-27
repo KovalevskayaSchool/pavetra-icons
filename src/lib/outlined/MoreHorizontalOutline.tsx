@@ -1,6 +1,6 @@
 import * as React from "react";
 export const MoreHorizontalOutline = props => {
-  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" {...props}><g data-name="Layer 2"><g data-name="more-horizotnal"><rect width={24} height={24} opacity={0} /><circle cx={12} cy={12} r={2} /><circle cx={19} cy={12} r={2} /><circle cx={5} cy={12} r={2} /></g></g></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" {...props}><g data-name="Layer 2"><g data-name="more-horizotnal"><rect width={24} height={24} opacity={0} /><circle cx={12} cy={12} r={2} /><circle cx={19} cy={12} r={2} /><circle cx={5} cy={12} r={2} /></g></g></svg>;
 };
 MoreHorizontalOutline.displayName = "MoreHorizontalOutline";
 export default MoreHorizontalOutline;
