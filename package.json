@@ -1,6 +1,6 @@
 {
   "name": "@kovalevskayaschool/pavetra-icons",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "react icons",
   "private": true,
   "main": "./dist/index.js",

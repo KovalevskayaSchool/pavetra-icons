@@ -84,17 +84,17 @@ const generateIcons = async (): Promise<void> => {
         const svgCode: string = await readFile(path.join(folderIconPath, file));
 
         const componentName = toPascalCase(file.replace(".svg", ""));
+        const hasFillNone = svgCode.includes('fill="none"');
         const jsCode = await transform.sync(
           svgCode,
           {
             icon: true,
             template: renderTemplate,
             replaceAttrValues: {
-              fill: "none", // if outline
+              stroke: "currentColor", // if fill none - replace it
             },
             svgProps: {
-              fill: "none",
-              stroke: "currentColor",
+              fill: hasFillNone ? "none" : "currentColor",
             },
           },
           { componentName }
