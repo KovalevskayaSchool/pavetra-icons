@@ -34,6 +34,7 @@ export { PaperPlaneOutline } from './outlined/PaperPlaneOutline';
 export { PeopleOutline } from './outlined/PeopleOutline';
 export { PersonOutline } from './outlined/PersonOutline';
 export { PlusOutline } from './outlined/PlusOutline';
+export { RefreshOutline } from './outlined/RefreshOutline';
 export { SearchOutline } from './outlined/SearchOutline';
 export { SettingsOutline } from './outlined/SettingsOutline';
 export { Skype } from './outlined/Skype';
