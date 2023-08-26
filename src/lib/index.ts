@@ -6,6 +6,7 @@ export { BookmarkOutline } from './outlined/BookmarkOutline';
 export { CalendarEmptyOutline } from './outlined/CalendarEmptyOutline';
 export { CalendarOutline } from './outlined/CalendarOutline';
 export { CalendarPlusOutline } from './outlined/CalendarPlusOutline';
+export { ChartOutlined } from './outlined/ChartOutlined';
 export { CheckVerifiedOutline } from './outlined/CheckVerifiedOutline';
 export { CheckmarkOutline } from './outlined/CheckmarkOutline';
 export { ChevronDownOutline } from './outlined/ChevronDownOutline';
@@ -15,6 +16,7 @@ export { ChevronRightDoubleOutline } from './outlined/ChevronRightDoubleOutline'
 export { ChevronRightOutline } from './outlined/ChevronRightOutline';
 export { ChevronUpOutline } from './outlined/ChevronUpOutline';
 export { CircleOutline } from './outlined/CircleOutline';
+export { ClockOutlined } from './outlined/ClockOutlined';
 export { CloseOutline } from './outlined/CloseOutline';
 export { CreditCardOutline } from './outlined/CreditCardOutline';
 export { DoneAllOutline } from './outlined/DoneAllOutline';
