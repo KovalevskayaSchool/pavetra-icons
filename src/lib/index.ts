@@ -25,6 +25,7 @@ export { DoneAllOutline } from './outlined/DoneAllOutline';
 export { EditOutline } from './outlined/EditOutline';
 export { EyeOffOutline } from './outlined/EyeOffOutline';
 export { EyeOutline } from './outlined/EyeOutline';
+export { FaceSmileOutline } from './outlined/FaceSmileOutline';
 export { GridOutline } from './outlined/GridOutline';
 export { HeadphonesOutline } from './outlined/HeadphonesOutline';
 export { Instagram } from './outlined/Instagram';
