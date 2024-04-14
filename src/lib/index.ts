@@ -20,7 +20,7 @@ export { ChevronUpOutline } from './outlined/ChevronUpOutline';
 export { CircleOutline } from './outlined/CircleOutline';
 export { ClockOutline } from './outlined/ClockOutline';
 export { CloseOutline } from './outlined/CloseOutline';
-export { Copy } from './outlined/Copy';
+export { CopyOutline } from './outlined/CopyOutline';
 export { CreditCardOutline } from './outlined/CreditCardOutline';
 export { DoneAllOutline } from './outlined/DoneAllOutline';
 export { EditOutline } from './outlined/EditOutline';

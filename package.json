@@ -1,6 +1,6 @@
 {
   "name": "@symblight/pavetra-icons",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "react icons",
   "private": false,
   "main": "./dist/index.js",
